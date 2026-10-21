@@ -1,0 +1,15 @@
+/* Mobile-first; matches the WcStore design's 1fr/320px split from 1024px up. */
+
+.sf-banner-inner { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+.sf-stats-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.sf-layout { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; padding-top: 24px; padding-bottom: 64px; }
+.sf-sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+@media (min-width: 640px) {
+  .sf-banner-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+
+@media (min-width: 1024px) {
+  .sf-layout { grid-template-columns: 1fr 320px; gap: 32px; }
+}

@@ -1,0 +1,51 @@
+/* The WcHome marketplace layout, mobile-first and scaling up to the 1200px
+ * desktop design. Colours/spacing that don't change by breakpoint stay inline
+ * on the component; only the parts that need a real media query live here. */
+
+.home-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter-mobile); }
+
+.home-hero-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; }
+.home-hero-image-wrap { position: relative; }
+.home-hero-image { width: 100%; height: 280px; object-fit: cover; border-radius: 28px; }
+.home-hero-proof-card { position: absolute; left: 14px; right: 14px; bottom: 14px; width: auto; }
+.home-heading { font-size: clamp(34px, 8vw, 66px); }
+
+.home-cat-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.home-cat-row::-webkit-scrollbar { display: none; }
+
+.home-listings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+
+.home-trust-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+
+.home-swap-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+.home-swap-heading { font-size: clamp(26px, 4vw, 44px); }
+
+.home-seller-cta { display: grid; grid-template-columns: 1fr; }
+.home-seller-cta-copy { padding: 32px 24px; }
+.home-seller-cta-image { display: none; }
+
+.home-footer-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.home-footer-col { display: flex; flex-direction: column; gap: 10px; }
+
+@media (min-width: 640px) {
+  .home-listings-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .home-seller-cta { grid-template-columns: 1fr 1fr; }
+  .home-seller-cta-copy { padding: 48px; }
+  .home-seller-cta-image { display: block; }
+  .home-swap-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+}
+
+@media (min-width: 1024px) {
+  .home-container { padding: 0 32px; }
+  .home-hero-grid { grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: end; }
+  .home-hero-image { height: 520px; border-radius: 36px 36px 0 0; }
+  .home-hero-proof-card { left: -28px; right: auto; bottom: 56px; width: 220px; }
+  .home-listings-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .home-trust-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+  .home-footer-grid { grid-template-columns: 1.4fr repeat(4, minmax(0, 1fr)); gap: 32px; }
+}

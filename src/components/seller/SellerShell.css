@@ -1,0 +1,32 @@
+.seller-shell { min-height: 100dvh; display: flex; flex-direction: column; background: var(--surface-sunken); }
+
+.seller-aside {
+  flex: 0 0 auto; background: var(--surface-card); border-bottom: 1px solid var(--border-subtle);
+  padding: 16px var(--gutter-mobile); display: flex; align-items: center; gap: 16px; overflow-x: auto;
+}
+.seller-brand { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+.seller-brand span:first-child { font-size: 17px; font-weight: 800; letter-spacing: -0.04em; color: var(--ink-950); white-space: nowrap; }
+.seller-badge { height: 20px; padding: 0 8px; display: inline-flex; align-items: center; border-radius: var(--radius-pill); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; background: var(--surface-brand-soft); color: var(--blue-700); }
+
+.seller-aside nav { display: flex; gap: 4px; flex: 1; overflow-x: auto; }
+.seller-aside nav a, .seller-aside nav button {
+  all: unset; flex: 0 0 auto; display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px;
+  border-radius: var(--radius-pill); font-size: 13px; font-weight: 500; color: var(--text-body);
+  background: transparent; cursor: pointer; white-space: nowrap; transition: var(--transition-control);
+}
+.seller-aside nav a:hover, .seller-aside nav button:hover { background: var(--ink-100); }
+.seller-aside nav a.is-active { background: var(--surface-brand-soft); color: var(--brand-primary); font-weight: 600; }
+
+.seller-main { flex: 1; padding: 20px var(--gutter-mobile) 48px; }
+
+@media (min-width: 900px) {
+  .seller-shell { flex-direction: row; }
+  .seller-aside {
+    flex-direction: column; align-items: stretch; width: 248px; padding: 22px 16px; gap: 18px;
+    border-right: 1px solid var(--border-subtle); border-bottom: none; overflow-x: visible;
+  }
+  .seller-brand { padding: 4px 10px 14px; }
+  .seller-aside nav { flex-direction: column; gap: 2px; overflow-x: visible; }
+  .seller-aside nav a, .seller-aside nav button { height: 42px; justify-content: flex-start; }
+  .seller-main { padding: 28px 36px 48px; }
+}

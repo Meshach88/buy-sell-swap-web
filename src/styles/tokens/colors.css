@@ -1,0 +1,58 @@
+:root{
+/* Brand blue — primary. Electric, saturated, Lagos-bright. */
+--blue-50:#EEF2FF;--blue-100:#DCE4FF;--blue-200:#B9C9FF;--blue-300:#8EA6FF;
+--blue-400:#5B7DFF;--blue-500:#2E56FB;--blue-600:#1B3FEA;--blue-700:#1430BC;
+--blue-800:#102796;--blue-900:#0B1B68;--blue-950:#060F3B;
+
+/* Lemon green — accent. Never used as body-text colour. */
+--lemon-50:#FAFFE8;--lemon-100:#F2FFC2;--lemon-200:#E7FF87;--lemon-300:#DAFA4E;
+--lemon-400:#CDF23C;--lemon-500:#B4DC15;--lemon-600:#8FB40C;--lemon-700:#6B860C;
+--lemon-800:#4E620F;--lemon-900:#3A4A10;
+
+/* Neutrals — cool-leaning so they sit under the blue without going muddy. */
+--ink-950:#070A18;--ink-900:#0E1327;--ink-800:#1B2138;--ink-700:#2E3650;
+--ink-600:#4A5470;--ink-500:#6B768F;--ink-400:#949EB4;--ink-300:#C1C8D6;
+--ink-200:#DDE2EB;--ink-100:#EDF0F5;--ink-50:#F6F8FB;--white:#FFFFFF;
+
+/* Semantic */
+--green-500:#12B76A;--green-100:#D6F6E6;
+--amber-500:#F59E0B;--amber-100:#FEF0CD;
+--red-500:#E5484D;--red-100:#FCE0E1;
+
+/* Aliases — use these in components */
+--brand-primary:var(--blue-600);
+--brand-primary-hover:var(--blue-700);
+--brand-primary-press:var(--blue-800);
+--brand-accent:var(--lemon-400);
+--brand-accent-hover:var(--lemon-500);
+--brand-accent-press:var(--lemon-600);
+
+--text-strong:var(--ink-950);
+--text-body:var(--ink-800);
+--text-muted:var(--ink-500);
+--text-faint:var(--ink-400);
+--text-on-primary:var(--white);
+--text-on-accent:var(--ink-950);
+--text-link:var(--blue-600);
+--text-link-hover:var(--blue-800);
+
+--surface-page:var(--ink-50);
+--surface-card:var(--white);
+--surface-sunken:var(--ink-100);
+--surface-inverse:var(--ink-950);
+--surface-brand:var(--blue-600);
+--surface-brand-soft:var(--blue-50);
+--surface-accent:var(--lemon-400);
+--surface-accent-soft:var(--lemon-100);
+
+--border-subtle:var(--ink-200);
+--border-strong:var(--ink-300);
+--border-brand:var(--blue-600);
+--border-focus:var(--blue-500);
+
+--status-verified-bg:var(--green-100);--status-verified-fg:#06623B;
+--status-pending-bg:var(--amber-100);--status-pending-fg:#7A4A05;
+--status-danger-bg:var(--red-100);--status-danger-fg:#8E1F23;
+
+--focus-ring:0 0 0 3px var(--blue-200);
+}

@@ -1,0 +1,17 @@
+.acct-sidebar {
+  display: flex; flex-direction: column; gap: 4px; border-radius: var(--radius-card); padding: 20px;
+  background: var(--surface-card); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-xs);
+}
+.acct-sidebar-profile { display: flex; align-items: center; gap: 12px; padding: 8px 8px 16px; }
+.acct-sidebar-profile div { display: flex; flex-direction: column; gap: 0; min-width: 0; }
+.acct-sidebar-name { font-size: 16px; font-weight: 700; color: var(--text-strong); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.acct-sidebar-area { font-size: 13px; color: var(--text-muted); }
+
+.acct-sidebar nav { display: flex; flex-direction: column; gap: 2px; }
+.acct-sidebar nav button {
+  all: unset; display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px;
+  border-radius: var(--radius-pill); font-size: 14px; font-weight: 500; color: var(--text-strong);
+  background: transparent; cursor: pointer; transition: var(--transition-control);
+}
+.acct-sidebar nav button:hover { background: var(--ink-100); }
+.acct-sidebar nav button.is-active { background: var(--surface-brand-soft); color: var(--brand-primary); font-weight: 600; }

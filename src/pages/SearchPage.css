@@ -1,0 +1,26 @@
+/* Mobile-first; matches the WcSearch design's 280px sidebar + 1fr results from 900px up. */
+
+.sp-layout { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; padding-bottom: 64px; }
+.sp-sidebar { display: flex; flex-direction: column; gap: 0; }
+.sp-group { display: flex; flex-direction: column; gap: 12px; padding: 18px 0; border-bottom: 1px solid var(--border-subtle); }
+.sp-group:first-child { padding-top: 0; }
+.sp-group:last-child { border-bottom: none; }
+
+.sp-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 16px; }
+
+.sp-top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 8px 0 24px; }
+.sp-search-bar { width: 100%; }
+
+@media (min-width: 480px) {
+  .sp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .sp-layout { grid-template-columns: 280px 1fr; gap: 32px; }
+  .sp-search-bar { width: 360px; }
+  .sp-top-row { flex-wrap: nowrap; }
+}
+
+@media (min-width: 1024px) {
+  .sp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
