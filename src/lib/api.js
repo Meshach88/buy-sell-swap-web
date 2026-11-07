@@ -1,4 +1,9 @@
-const BASE = import.meta.env.VITE_API_URL || '/api';
+// Production API. Dev uses '/api', which vite.config.js proxies to the local
+// Laravel server. Setting VITE_API_URL overrides both.
+export const PRODUCTION_API_URL = 'https://api.buysellswap.online/api';
+
+const BASE =
+  import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '/api' : PRODUCTION_API_URL);
 const TOKEN_KEY = 'bss.token';
 
 export const tokenStore = {
